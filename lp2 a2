@@ -1,0 +1,12 @@
+Github Login
+( <>Code ) => local Clone => HTTPS link => copy it
+
+Console Google Cloud login with collegeID
+New Project
+Search -> Admin API -> Enable
+Activate Cloud Shell [ >_ ]
+  ls -> directory
+  rm -rf file_name -> delete file_name
+  git clone git_link
+  cd file_name
+  python main.py
