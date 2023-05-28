@@ -1,0 +1,53 @@
+*************************************************************************************************
+APX
+*************************************************************************************************
+public class Calc {
+    public integer num1 {get; set;}
+    public integer num2 {get; set;}
+    public integer result {get; set;}
+    
+    
+    public void add(){
+        result = num1 + num2;
+    }
+        
+    public void sub(){
+        result = num1 - num2;
+    }
+        
+    public void mul(){
+        result = num1 * num2;
+    }
+        
+    public void div(){
+        result = num1 / num2;
+    }
+    
+}
+
+
+
+*************************************************************************************************
+VFP:
+*************************************************************************************************
+
+<apex:page controller="Calc">
+    <apex:sectionHeader title="Calculator" subtitle="Basic Calc"/>
+    <apex:form>
+	<apex:pageBlock title="Calc">
+        <apex:pageBlockButtons location="bottom">
+    		<apex:commandButton value="Addition" action="{!add}" reRender="res"/>    
+    		<apex:commandButton value="Subtraction" action="{!sub}" reRender="res"/>    
+	    	<apex:commandButton value="Multiplication" action="{!mul}" reRender="res"/>    
+    		<apex:commandButton value="Division" action="{!div}" reRender="res"/>    
+    	</apex:pageBlockButtons>
+        <apex:pageBlockSection title="Calcu">
+        	<apex:inputText label="Enter num1" html-placeholder="Number 1" value="{!num1}" />
+            <apex:inputText label="Enter num2" html-placeholder="Number 2" value="{!num2}" />
+            <apex:outputText label="Result" value="{!result}" id="res">
+            	
+            </apex:outputText>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+    </apex:form>
+</apex:page>
